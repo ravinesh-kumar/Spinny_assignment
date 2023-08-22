@@ -25,7 +25,9 @@ SECRET_KEY = 'q79q8rb7q%5t2zav7ggct+zf1*hh$(!3=1(iqm#gzxtkzs&1&z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# settings.py
+ALLOWED_HOSTS = ['spinnyy.onrender.com']
+
 
 
 # Application definition
