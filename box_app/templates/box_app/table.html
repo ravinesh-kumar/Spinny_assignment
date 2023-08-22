@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <!-- <th>Serial <br>number</th> -->
+    <th>length</th>
+    <th>width</th>
+    <th>height</th>
+    <th>area</th>
+    <th>volume</th>
+    <th>Created by</th>
+    <th>Edit</th>
+    
+
+  </tr>
+  {% for data in data%}
+  <tr>
+    <!-- <td>{{data}}</td> -->
+    <td>{{data.length}}</td>
+    <td>{{data.width}}</td>
+    <td>{{data.height}}</td>
+    <td>{{data.area}}</td>
+    <td>{{data.volume}}</td>
+    <td>{{user.username}}</td>
+    <td><a href="delete?id={{data.id}}">Delete</a></td>
+    
+   
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
+

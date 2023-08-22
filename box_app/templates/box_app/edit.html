@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile</title>
+</head>
+
+<body>
+    <h2>Profile</h2>
+    <p>Welcome, {{ user.username }}!</p>
+    <form action="edit" method="post">
+        {% csrf_token %}
+        <label>Length</label>
+    <input type="text" name="length" placeholder="length" required><br><br>
+    <label>width</label>
+    <input type="text" name="width" placeholder="width" required><br><br>
+    <label>height</label>
+    <input type="text" name="height" placeholder="height" required><br><br>
+    <label>area</label>
+    <input type="text" name="area" placeholder="area" required><br><br>
+    <label>volume</label>
+    <input type="text" name="volume" placeholder="volume" required><br><br>
+    <label>Created by</label>
+    <input type="dropbox" name="Created by" placeholder={{user.username}} value="{{user.username}}" required><br><br>
+    <input type="submit">
+    </form>
+
+    
+</body>
+
+</html>
